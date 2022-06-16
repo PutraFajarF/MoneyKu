@@ -4,13 +4,13 @@ import { useState } from 'react';
 import styles from './Signup.module.css';
 
 const Signup = () => {
-  const [name, setName] = useState('');
+  const [displayName, setDisplayName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, password);
+    console.log(displayName, email, password);
   }
   return (
     <form onSubmit={handleSubmit} className={styles['signup-form']}>
@@ -20,8 +20,8 @@ const Signup = () => {
         <input 
           className=''
           type='text'
-          onChange={(e) => setName(e.target.value)}
-          value={name}
+          onChange={(e) => setDisplayName(e.target.value)}
+          value={displayName}
         />
       </label>
       <label>
